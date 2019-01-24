@@ -1,5 +1,7 @@
 # `nanomorph-guard`
 
+[![Build Status](https://travis-ci.com/hyperdivision/nanomorph-guard.svg?branch=master)](https://travis-ci.com/hyperdivision/nanomorph-guard)
+
 > Guard element against being touched by nanomorph
 
 ## Usage

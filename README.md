@@ -4,6 +4,8 @@
 
 > Guard element against being touched by nanomorph
 
+<small>Requires nanomorph@5.4.0 or up.</small>
+
 ## Usage
 
 Useful with components that expect to keep a reference to their parent element,

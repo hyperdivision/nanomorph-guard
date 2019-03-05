@@ -23,6 +23,8 @@ module.exports = function guard (el) {
 
 function createProxy (el) {
   var pel = document.createElement(el.nodeName)
+  // if you see this in devtools, something went wrong!
+  pel.dataset.proxy = 'true'
   pel.dataset.nanomorphComponentId = getComponentId(el)
   pel.isSameNode = (node) => getComponentId(pel) === getComponentId(node)
   proxies.set(el, pel)

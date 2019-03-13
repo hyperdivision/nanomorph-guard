@@ -24,7 +24,7 @@ module.exports = function guard (el) {
 function createProxy (el) {
   var pel = document.createElement(el.nodeName)
   pel.dataset.nanomorphGuardId = el.dataset.nanomorphGuardId
-  pel.isSameNode = (node) => pel.dataset.nanomorphGuardId === node.dataset.nanomorphGuardId
+  pel.isSameNode = (node) => node.dataset && pel.dataset.nanomorphGuardId === node.dataset.nanomorphGuardId
   proxies.set(el, pel)
   return pel
 }

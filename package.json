@@ -1,6 +1,6 @@
 {
   "name": "nanomorph-guard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Guard element against being touched by nanomorph",
   "main": "index.js",
   "publishConfig": {

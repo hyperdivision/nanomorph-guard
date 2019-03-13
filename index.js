@@ -12,7 +12,7 @@ module.exports = function guard (el) {
   // Short circuit all non-node
   if (!el.dataset) return el
   // Add the identifier the first time we encounter the node
-  if (!el.dataset.nanomorphGuardId) el.dataset.nanomorphGuardId = ns + (cnt++)
+  if (!el.dataset.nanomorphComponentId) el.dataset.nanomorphComponentId = ns + (cnt++)
   // Not yet attached to the DOM
   if (!el.parentNode) return el
 
@@ -23,8 +23,8 @@ module.exports = function guard (el) {
 
 function createProxy (el) {
   var pel = document.createElement(el.nodeName)
-  pel.dataset.nanomorphGuardId = el.dataset.nanomorphGuardId
-  pel.isSameNode = (node) => node.dataset && pel.dataset.nanomorphGuardId === node.dataset.nanomorphGuardId
+  pel.dataset.nanomorphComponentId = el.dataset.nanomorphComponentId
+  pel.isSameNode = (node) => node.dataset && pel.dataset.nanomorphComponentId === node.dataset.nanomorphComponentId
   proxies.set(el, pel)
   return pel
 }
